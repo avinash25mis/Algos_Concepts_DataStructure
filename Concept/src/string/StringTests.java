@@ -1,4 +1,4 @@
-package com.string;
+package string;
 
 public class StringTests {
 

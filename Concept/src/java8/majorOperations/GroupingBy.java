@@ -1,6 +1,6 @@
-package com.java8.majorOperations;
+package java8.majorOperations;
 
-import com.java8.Fruit;
+import java8.Fruit;
 
 import java.util.*;
 import java.util.function.Function;

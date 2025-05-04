@@ -1,4 +1,4 @@
-package com.general;
+package general;
 
 import java.util.*;
 

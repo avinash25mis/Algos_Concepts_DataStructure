@@ -1,4 +1,4 @@
-package com.java8.majorOperations;
+package java8.majorOperations;
 
 public class StreamMap {
 }

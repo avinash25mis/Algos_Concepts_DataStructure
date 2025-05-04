@@ -1,13 +1,11 @@
-package com.java8.majorOperations;
+package java8.majorOperations;
 
-import com.java8.Fruit;
+import java8.Fruit;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class ReduceAndCollect {
 

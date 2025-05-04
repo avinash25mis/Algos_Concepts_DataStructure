@@ -1,4 +1,4 @@
-package com.newFeatures;
+package newFeatures;
 
 import java.util.concurrent.BlockingQueue;
 

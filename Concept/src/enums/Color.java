@@ -1,4 +1,4 @@
-package com.enums;
+package enums;
 
 /**
  * @author avinash.a.mishra

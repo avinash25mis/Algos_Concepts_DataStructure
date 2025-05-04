@@ -1,4 +1,4 @@
-package com.java8.defaultAndStatic;
+package java8.defaultAndStatic;
 
 public interface I4 {
 

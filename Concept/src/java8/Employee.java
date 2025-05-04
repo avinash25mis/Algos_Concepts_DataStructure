@@ -1,6 +1,5 @@
-package com.java8;
+package java8;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {

@@ -1,9 +1,8 @@
-package com.java8.stream;
+package java8.stream;
 
-import com.java8.Employee;
+import java8.Employee;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class StreamAPI

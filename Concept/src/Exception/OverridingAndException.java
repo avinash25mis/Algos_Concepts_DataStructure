@@ -1,7 +1,4 @@
-package com.Exception;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
+package Exception;
 
 /**
  * @author avinash.a.mishra

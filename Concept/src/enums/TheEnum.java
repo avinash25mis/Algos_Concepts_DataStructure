@@ -1,6 +1,6 @@
-package com.enums;
+package enums;
 
-import com.Inheritance.ClassImplentInterface.LeftInterface;
+import Inheritance.ClassImplentInterface.LeftInterface;
 
 /**
  * @author avinash.a.mishra

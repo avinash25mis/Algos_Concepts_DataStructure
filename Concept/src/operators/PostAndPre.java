@@ -1,4 +1,4 @@
-package com.operators;
+package operators;
 
 public class PostAndPre {
 

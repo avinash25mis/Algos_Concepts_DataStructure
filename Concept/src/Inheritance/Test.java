@@ -1,6 +1,4 @@
-package com.Inheritance;
-
-import java.util.*;
+package Inheritance;
 
 /**
  * @author avinash.a.mishra

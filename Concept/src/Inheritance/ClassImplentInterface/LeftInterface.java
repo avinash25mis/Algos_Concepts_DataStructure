@@ -1,4 +1,4 @@
-package com.Inheritance.ClassImplentInterface;
+package Inheritance.ClassImplentInterface;
 
 public interface LeftInterface {
 

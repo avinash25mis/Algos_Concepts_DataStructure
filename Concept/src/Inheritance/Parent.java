@@ -1,4 +1,4 @@
-package com.Inheritance;
+package Inheritance;
 
 public class Parent {
 

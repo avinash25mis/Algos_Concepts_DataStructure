@@ -1,5 +1,5 @@
 /*
-package com.Inheritance.ClassImplentInterface;
+package Inheritance.ClassImplentInterface;
 
 public class ClassLeftRight implements LeftInterface, RightInterface {
     @Override

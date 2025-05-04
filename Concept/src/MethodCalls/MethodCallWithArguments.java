@@ -1,4 +1,4 @@
-package com.MethodCalls;
+package MethodCalls;
 
 public class MethodCallWithArguments {
 

@@ -1,9 +1,9 @@
-package com.trickQuestions;
+package trickQuestions;
 
-import com.Inheritance.Child;
-import com.Inheritance.ClassUsingInfaceVariable.TheInterface;
-import com.Inheritance.ClassUsingInfaceVariable.TheClass;
-import com.Inheritance.Parent;
+import Inheritance.Child;
+import Inheritance.ClassUsingInfaceVariable.TheInterface;
+import Inheritance.ClassUsingInfaceVariable.TheClass;
+import Inheritance.Parent;
 
 public class Trick {
     public static void main(String[] args) {

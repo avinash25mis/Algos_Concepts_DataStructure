@@ -1,4 +1,4 @@
-package com.Inheritance.ClassUsingInfaceVariable;
+package Inheritance.ClassUsingInfaceVariable;
 
 public interface TheInterface {
 

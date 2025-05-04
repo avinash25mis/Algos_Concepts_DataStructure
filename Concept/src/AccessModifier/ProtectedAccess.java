@@ -1,4 +1,4 @@
-package com.AccessModifier;
+package AccessModifier;
 
 import java.util.HashMap;
 import java.util.Map;

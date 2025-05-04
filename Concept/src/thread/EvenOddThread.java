@@ -1,4 +1,4 @@
-package com.thread;
+package thread;
 
 public class EvenOddThread {
     public static void main(String[] args) {

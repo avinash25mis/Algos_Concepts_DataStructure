@@ -1,6 +1,6 @@
-package com.java8.majorOperations;
+package java8.majorOperations;
 
-import com.java8.Employee;
+import java8.Employee;
 
 import java.util.ArrayList;
 import java.util.Collections;
