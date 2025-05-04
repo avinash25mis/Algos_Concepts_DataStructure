@@ -1,0 +1,18 @@
+
+- as it run via stack so we keep on submitting the sub tasks to stack but these subtasks gets executed in reverse order
+
+- in case using some incremental counter to pass as parameter in each call
+   use ++i/--i rather than i++/i-- (don't work )
+- or you may rather increment it before pass it into the parameter
+
+note that still ++i and i+1 cannot be used interchangeably in the argument as there are scenario where you
+want rest of the code to be executed with same value of i , in those cases choose i+1
+
+- in recursion all the subtask wait  for other subtask which are called after it  to gets finished
+
+- in some approaches we directly multiply with the return of the function
+
+how to proceed ?
+1.factorial
+2.fibonacci
+in both

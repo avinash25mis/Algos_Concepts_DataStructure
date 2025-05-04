@@ -1,0 +1,4 @@
+removing repitation from string
+
+1. using toCharArray and adding element to HashSet
+HashSet<Character> s = new LinkedHashSet<>(n - 1);

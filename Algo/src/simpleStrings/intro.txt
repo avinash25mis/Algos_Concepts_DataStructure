@@ -1,0 +1,31 @@
+few basic things about strings
+
+
+1. In str.subString() the outer index is excluded
+    String str="Welcome";
+    System.out.println(str.substring(0,2));
+
+    output
+    "We"
+
+
+2.
+String str="abc"
+String temp= str;
+str=str+"k"
+
+this does not affect the temp string
+
+but
+ StringBuilder sb = new StringBuilder(str);
+ StringBuilder temp=sb;
+ sb.append("tttt");
+
+ this affects the temp also
+
+
+ 3.
+StringBuilder sb = new StringBuilder(str);
+sb.reverse()
+
+we donot need to capture it coz it already changes the sb

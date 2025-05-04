@@ -1,0 +1,16 @@
+Npr   =  P(n,r) = n!/(n-r)!
+
+10p4
+10! / (10-4)!
+= 10! / 6!
+= 10 × 9 × 8 × 7 × 6! / 6!
+
+a shortcut is  10 × 9 × 8 × 7  ie   stop factorial at 4th  time
+-----------------------------
+nCr = n! / r! * (n - r)!
+
+5C3
+= 5!/ (5 – 3)! 3!
+= (5 * 4 * 3)/3!
+
+Here in code the idea is to move a character to each location present and fixing it after that

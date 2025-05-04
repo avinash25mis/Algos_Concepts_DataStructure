@@ -1,0 +1,16 @@
+Sliding window can be applied to
+1.array
+2.strings
+
+there are two type of sliding window
+
+1. fixed size sliding window  (say n =3 and find the max sub array sum)
+2. variable size sliding window (finding the largest window or smallest window subjected to a condition)
+
+hints to detech string sliders
+array sum,
+subarray subarray sub,
+largest window subjected to a condition
+
+in one condition size (k)  will be given
+but in variable size sliding window, window size (k) is not given

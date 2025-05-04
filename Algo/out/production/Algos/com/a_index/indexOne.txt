@@ -1,0 +1,34 @@
+Indexing just the tricky questions
+
+
+1. Number of small & big burgers which can be prepaid from given tommatos and slices
+ small=2t+b   big=4t+b
+
+2.Find longest consecutive increasing/decreasing by 1 or by any digits
+
+3. match the opening & closing brackets
+
+4.Decimal/Integer to Roman Numbers
+
+5.Roman to decimal number conversion
+
+6.word/array permutations
+
+7. fibonacci & palindromic
+
+8.Maximum profit on selling the stock
+
+9. find if two strings are anagram without sorting them in O(n)
+
+10. find longest non repeating character length in string  in O(n)
+
+11. Max sum with given length in the array
+
+12. find target sum in the given array
+
+12 find maximus sum in the array (doubtful)
+
+13.sum of two array with carry
+
+14. sum of two linkedlist with carry
+

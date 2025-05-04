@@ -1,0 +1,2 @@
+Find the index of the array which make the provided sum
+and provide the index in sorted order

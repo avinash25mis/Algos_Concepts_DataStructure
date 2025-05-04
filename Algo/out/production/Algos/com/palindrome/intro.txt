@@ -1,0 +1,4 @@
+For longest palindrome ask questions
+1. is special characters  considered
+2. if there are multiple of same  length
+3. can there be no palidrome at all then will be consider single digit as palindrome
