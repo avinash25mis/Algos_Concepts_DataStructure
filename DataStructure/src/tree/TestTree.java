@@ -1,6 +1,6 @@
 package tree;
 
-import com.tree.core.*;
+import tree.core.*;
 import tree.core.BinaryTree;
 import tree.core.BinaryTreeUtils;
 
