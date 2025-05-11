@@ -2,6 +2,9 @@ package palindrome;
 
 public class LongestPalindromBasicWay {
 
+/*    Palindrome
+    a number that remains the same when its digits are reversed.
+    For example, 121, 1331*/
 
     public static void main(String[] args) {
 
@@ -9,7 +12,6 @@ public class LongestPalindromBasicWay {
 
     /*
     * even knowing  brute force help us optimise
-    *i=j means
     * when i =0 --> j=i ie j=0   Hence we cover from dead left to dead right
     * when i=2  --> j=i  so j=2   here we cover from 2nd index to end right
     * in this way actually cover all the window in brute force

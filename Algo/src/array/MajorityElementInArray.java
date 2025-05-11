@@ -1,14 +1,12 @@
 package array;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /*
 *
 * A majority element in an array A[] of size n
-* is an element that appears more than n/2 times
+* is an element that appears n/2 or more than n/2 times
 *
  * */
 public class MajorityElementInArray {
@@ -17,6 +15,7 @@ public class MajorityElementInArray {
         int [] arr= {3, 3, 4, 2,  2, 2, 4, 4};
         majority(arr);
         //majorityByMap(arr);
+
 
     }
 

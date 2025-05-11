@@ -1,6 +1,6 @@
 package java8.stream;
 
-import java8.Employee;
+import java8.common.DataForStream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,34 +11,35 @@ import java.util.stream.Collectors;
 
 public class DetailsOnOperations {
 
-    private static List<Employee> employeeList= new ArrayList<>();
+    private static List<DataForStream> dataForStreamList = new ArrayList<>();
+
 
     public static void main(String[] args) {
-        Employee.initialize(employeeList);
+        dataForStreamList = DataForStream.getEmployeeList();
         printFemaleMaleEmployeesCount();
     }
 
     private static void printFemaleMaleEmployeesCount() {
      //simplest way
-      long male = employeeList.stream().filter(e -> e.getGender().equals("Male")).count();
-      long female = employeeList.stream().filter(e -> e.getGender().equals("Male")).count();
+      long male = dataForStreamList.stream().filter(e -> e.getGender().equals("Male")).count();
+      //only grouping by gives the map
+      Map<String, List<DataForStream>> genderWiseList = dataForStreamList.stream().collect(Collectors.groupingBy(DataForStream::getGender));
+      //grouping by with followed by Collector.counting() gives count
+      Map<String, Long>        genderAndItsCount = dataForStreamList.stream().collect(Collectors.groupingBy(DataForStream::getGender, Collectors.counting()));
 
-
+     // similarly grouping by and followed by sum/average of salary of each department
+      Map<String, Double> deptAndTotalSalary = dataForStreamList.stream().collect(Collectors.groupingBy(DataForStream::getDepartment, Collectors.summingDouble(DataForStream::getSalary)));
+      Map<String, Double> deptAndItsAvgSalary = dataForStreamList.stream().collect(Collectors.groupingBy(DataForStream::getDepartment, Collectors.averagingDouble(DataForStream::getSalary)));
       System.out.println();
-      Map<String, List<Employee>> genderWiseList = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender));
-        //a bit advanced, note that it will alow us grouping by without even knowing the number of groups
-        Map<String, Long> genderAndItsCount = employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
 
-        //how to group by a simple array ?
+      //how to group by a simple array then ?
       List<String> items = Arrays.asList("apple", "apple", "banana","apple", "orange", "banana", "papaya");
+      // this gives the count of each fruit
+      Map<String, Long> occuranceOfFruits =  items.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+      Map<String, Long> occuranceOfFruits2 = items.stream().collect(Collectors.groupingBy(e->e,Collectors.counting()));
 
-       Map<String, Long> occuranceOfFruits =items.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
 
-      //group by and sum of salary of each department
-        Map<String, Double> deptAndTotalSalary = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.summingDouble(Employee::getSalary)));
-        Map<String, Double> deptAndItsAvgSalary = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
-        System.out.println();
 
 
 
@@ -47,8 +48,8 @@ public class DetailsOnOperations {
 
     private static void printAllDepartmentNames() {
 
-        employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment)).keySet().forEach(System.out::println);
-        employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
+        dataForStreamList.stream().collect(Collectors.groupingBy(DataForStream::getDepartment)).keySet().forEach(System.out::println);
+        dataForStreamList.stream().map(DataForStream::getDepartment).distinct().forEach(System.out::println);
 
     }
 

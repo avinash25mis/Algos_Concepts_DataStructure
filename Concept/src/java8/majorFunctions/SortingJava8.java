@@ -1,6 +1,6 @@
-package java8.majorOperations;
+package java8.majorFunctions;
 
-import java8.Employee;
+import java8.common.DataForStream;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,10 +29,10 @@ public class SortingJava8 {
     }
 
     private static void sortByEmployeeSalaryAndAge() {
-        List<Employee> list= new ArrayList<>();
-        Employee.initialize(list);
+        List<DataForStream> list= new ArrayList<>();
+        list = DataForStream.getEmployeeList();
 
-        List<Employee> collect = list.stream().sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getAge)).collect(Collectors.toList());
+        List<DataForStream> collect = list.stream().sorted(Comparator.comparing(DataForStream::getName).thenComparing(DataForStream::getAge)).collect(Collectors.toList());
         System.out.println(collect);
         //same thing does not work with lambda
       //  list.stream().sorted(Comparator.comparing(e->e.getName()).thenComparing(e1->e1.getAge());
@@ -40,15 +40,15 @@ public class SortingJava8 {
    }
 
     private static void sortByEmployeeSalary() {
-        List<Employee> list= new ArrayList<>();
-        Employee.initialize(list);
+        List<DataForStream> list= new ArrayList<>();
+        list = DataForStream.getEmployeeList();
 
-        list.stream().sorted(Comparator.comparing(Employee::getName));
+        list.stream().sorted(Comparator.comparing(DataForStream::getName));
         System.out.println(list);
-        List<Employee> collect = list.stream().sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
+        List<DataForStream> collect = list.stream().sorted(Comparator.comparing(DataForStream::getName)).collect(Collectors.toList());
         System.out.println(collect); //to see the sorted result we need to collect
         //as we also know till the time we use any terminal opertion, streams are lazy
-        List<Employee> collect1 = list.stream().sorted(Comparator.comparing(e -> e.getName(), Collections.reverseOrder())).collect(Collectors.toList());
+        List<DataForStream> collect1 = list.stream().sorted(Comparator.comparing(e -> e.getName(), Collections.reverseOrder())).collect(Collectors.toList());
 
         System.out.println(collect1);
     }

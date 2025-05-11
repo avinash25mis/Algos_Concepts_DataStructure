@@ -1,6 +1,6 @@
-package java8.majorOperations;
+package java8.majorFunctions;
 
-import java8.Fruit;
+import java8.common.Fruit;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

@@ -13,21 +13,23 @@ public class FindKthLargestElement {
 
     /*
     * Time Complexity of this solution is O(N Log N)
-    * I am afraid about the duplicate element cases which can be removed with a step of hashset/another array
+    * I am afraid about the duplicate element cases which can be
+    * removed with a step of hashset/another array
      *
     * */
     public static int kthLargestElement(Integer[] arr, int k)
     {
         /*
         the significance of using Interger[] arr over int [] is that the
-        overloaded function of passing the reverseOrder parameter is applicable to only object types
+        overloaded function of passing the reverseOrder parameter
+         is applicable to only object types
         * */
 
         Arrays.sort(arr, Comparator.reverseOrder());
        // Arrays.sort(arr, Collections.reverseOrder());
        //both the Comparator.reverseOrder() and Collections.reverseOrder() works well
 
-        // Return k'th element in
+        // Return k'th element not arr[k] as array starts with zero
         return arr[k - 1];
     }
 
@@ -35,7 +37,7 @@ public class FindKthLargestElement {
    /* map based STL approach
    *
    *   Array =7,0,16,0,17  , k=3
-   *
+   *  say we also get i sorted
    *  map
    *  0  | 2
    *  7  | 1
@@ -55,9 +57,9 @@ public class FindKthLargestElement {
     static int findBySTLApproach(Integer arr[], int k)
     {
 
-        Map<Integer, Integer> m= new TreeMap<>(Collections.reverseOrder());
-        // Map<Integer, Integer> m= new TreeMap<>();
-        //Set<Integer> m= new TreeSet<>(Collections.reverseOrder());//if counting each number as unique
+        Map<Integer, Integer> treeMap= new TreeMap<>(Collections.reverseOrder());
+        // Map<Integer, Integer> treeMap= new TreeMap<>();
+        //Set<Integer> treeMap= new TreeSet<>(Collections.reverseOrder());//if counting each number as unique
 
 
         for (int i = 0; i < arr.length; i++) {
@@ -66,15 +68,15 @@ public class FindKthLargestElement {
           * if(map.get()!=null) then incrementing the  counter & put back
           * */
 
-            m.put(arr[i], m.getOrDefault(arr[i], 0) + 1);
+            treeMap.put(arr[i], treeMap.getOrDefault(arr[i], 0) + 1);
             /* if present then increase the occurance count by + 1
-             if not present then null+1 will give exception hence default 0-- 0+1*/
+             if not alreadt present then null+1 will give exception hence default 0 is returned = 0+1=1*/
         }
 
 
         int freq = 0;
 
-        for (Map.Entry<Integer,Integer> it : m.entrySet())
+        for (Map.Entry<Integer,Integer> it : treeMap.entrySet())
         {
             // adding the frequencies of each element
             freq = freq +  it.getValue();

@@ -1,4 +1,4 @@
-package java8;
+package java8.common;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

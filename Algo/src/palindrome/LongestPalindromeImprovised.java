@@ -12,16 +12,16 @@ public class LongestPalindromeImprovised {
 
 
     /*
-    * when we look at the basic way we fine that two loops i & j are just used to navigate around
-    * and the third loop which is obvious checks if it is a palindrom
+    * when we look at the basic way we find that two loops i & j are just used to navigate around
+    * and the third loop which is the main loop to checks if it is a palindrome
     *
     * The trick here is to reduce the upper nested loops (i & j) to one (i)
     * we can start from center and call the check palindrome with only i itself
     *
-    * only concern here is that a palindrom can  have odd no of alphabet (kak) as well as
+    * only concern here is that a palindrome can  have odd no of alphabet (kak) as well as
     *  even no of alphabets(akka)
-    * so to consider the even no of alphabet we start with taking middle two elements (i,i+1)
-    * and to consider the odd no of alphabet we start with  (i,i)
+    * so to consider case 1 we start with taking middle two elements (i,i+1)
+    * and to consider case 2 we start with  (i,i)
     *
     *
     *

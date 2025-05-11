@@ -3,7 +3,6 @@ package array;
 import java.util.stream.Stream;
 
 /**
- * @author avinash.a.mishra
  *
  * find the missing number in the sequence of number
  *
