@@ -1,13 +1,7 @@
-package java8;
+public class DsTest {
 
-public class Questions {
 
     public static void main(String[] args) {
 
-
-
     }
-
-
-
 }

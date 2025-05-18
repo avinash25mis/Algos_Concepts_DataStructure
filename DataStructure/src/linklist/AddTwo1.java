@@ -5,6 +5,7 @@ package linklist;
  */
 
 
+import linklist.core.MyLinkListUtils;
 import linklist.core.SinglyNode;
 
 /**
@@ -25,7 +26,15 @@ import linklist.core.SinglyNode;
 class AddTwo1 {
 
     public static void main(String[] args) {
-        addTwoNumbers(null,null);
+        int arr1[]={9,9,9,9,};
+        int arr2[]={9,9,9};
+        SinglyNode l1 = MyLinkListUtils.generateLinkedList(arr1);
+        MyLinkListUtils.printTheLinkedList(l1);
+
+        SinglyNode l2 = MyLinkListUtils.generateLinkedList(arr2);
+        MyLinkListUtils.printTheLinkedList(l2);
+        SinglyNode resultLinkedList = addTwoNumbers(l1, l2);
+        MyLinkListUtils.printTheLinkedList(resultLinkedList);
     }
 
     public static SinglyNode addTwoNumbers(SinglyNode l1, SinglyNode l2) {

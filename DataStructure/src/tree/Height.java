@@ -1,5 +1,7 @@
 package tree;
 
+import tree.core.BinaryTree;
+import tree.core.BinaryTreeUtils;
 import tree.core.Node;
 
 public class Height {
@@ -27,4 +29,13 @@ public class Height {
         }
 
     }
+
+    public static void main(String[] args) {
+        BinaryTree binaryTree = BinaryTreeUtils.generateBinaryTree();
+        int i = heightOfTree(binaryTree.root);
+        System.out.println(i);
+
+    }
+
+
 }

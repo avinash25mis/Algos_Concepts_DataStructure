@@ -1,5 +1,7 @@
 package tree;
 
+import tree.core.BinaryTree;
+import tree.core.BinaryTreeUtils;
 import tree.core.Node;
 
 public class BFS {
@@ -48,9 +50,22 @@ public class BFS {
             printGivenLevel(node.right, level - 1);
         }
     }
+
+    /*
+     * just a way to remember
+     * logic consist of 2 "ifs" and one "else if"
+     * */
+
+
+
+
+
+    public static void main(String[] args) {
+        BinaryTree binaryTree = BinaryTreeUtils.generateBinaryTree();
+        BFS.breathFirstSearch(binaryTree.root);
+    }
 }
 
-/*
-* just a way to remember
-* logic consist of 2 "if" and one "else if"
-* */
+
+
+

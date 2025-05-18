@@ -29,6 +29,8 @@ package tree;
 
 
 
+import tree.core.BinaryTree;
+import tree.core.BinaryTreeUtils;
 import tree.core.Node;
 
 public class DFS {
@@ -67,5 +69,27 @@ public class DFS {
         System.out.print(node.key+" ");
 
     }
+
+
+     /*
+
+      tree
+      ----
+       2
+     /   \
+    3     4
+   /  \
+  5     6
+
+  */
+
+    public static void main(String[] args) {
+        BinaryTree binaryTree = BinaryTreeUtils.generateBinaryTree();
+        // BFS.breathFirstSearch(binaryTree.root);
+        // DFS.inOrder(binaryTree.root);
+        DFS.preOrder(binaryTree.root);
+       // DFS.postOrder(binaryTree.root);
+    }
+
 
 }

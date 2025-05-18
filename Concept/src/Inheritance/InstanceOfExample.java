@@ -1,13 +1,11 @@
-package trickQuestions;
+package Inheritance;
 
-import Inheritance.Child;
 import Inheritance.ClassUsingInfaceVariable.TheInterface;
 import Inheritance.ClassUsingInfaceVariable.TheClass;
-import Inheritance.Parent;
 
-public class Trick {
+public class InstanceOfExample {
     public static void main(String[] args) {
-        Trick t = new Trick();
+        InstanceOfExample t = new InstanceOfExample();
         t.instanceOFOperation();
     }
 

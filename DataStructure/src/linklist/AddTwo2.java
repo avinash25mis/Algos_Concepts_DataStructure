@@ -8,8 +8,8 @@ public class AddTwo2 {
 
 
     public static void main(String[] args) {
-        int arr1[]={9,9,9,9,9,9,9};
-        int arr2[]={9,9,9,9};
+        int arr1[]={9,9,9,9};
+        int arr2[]={9,9,9};
         SinglyNode l1 = MyLinkListUtils.generateLinkedList(arr1);
         MyLinkListUtils.printTheLinkedList(l1);
 
