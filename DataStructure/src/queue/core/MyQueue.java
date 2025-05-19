@@ -1,4 +1,4 @@
-package queue;
+package queue.core;
 
 import common.MyException;
 
@@ -16,13 +16,13 @@ public class MyQueue {
 
     int arr[];
 
-    MyQueue(int capacity){
+    public MyQueue(int capacity){
         this.capacity=capacity;
         arr=new int[capacity];
         size=rear=front=0;
     }
 
-    MyQueue(){
+    public MyQueue(){
 
         this(4);
         //passing a default capacity when user doesn't provide it

@@ -1,4 +1,4 @@
-package stack;
+package stack.core;
 
 import common.MyException;
 
@@ -12,11 +12,11 @@ public class MyDynamicStack {
 protected  int top;
 protected  int arr[];
 
-   MyDynamicStack(int size){
+   public MyDynamicStack(int size){
    arr = new int[size];
    }
 
-   MyDynamicStack(){
+   public MyDynamicStack(){
     this(4);
    }
 

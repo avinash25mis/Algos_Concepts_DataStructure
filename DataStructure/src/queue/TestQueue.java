@@ -1,6 +1,7 @@
 package queue;
 
 import common.MyException;
+import queue.core.MyQueue;
 
 /**
  * @author avinash.a.mishra
@@ -8,7 +9,7 @@ import common.MyException;
 public class TestQueue {
 
     public static void main(String[] args) throws MyException {
-       // testEnqueue();
+         // testEnqueue();
         //testEnqueueAndDequeue();
         reminderOperatorIncrementLogic();
     }
@@ -30,7 +31,7 @@ public class TestQueue {
     }
 
     private static void testEnqueueAndDequeue() throws MyException {
-        MyQueue queue= new MyQueue(3);
+        MyQueue queue = new MyQueue(3);
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);

@@ -1,4 +1,4 @@
-package stack;
+package stack.core;
 
 import common.MyException;
 
@@ -14,7 +14,7 @@ public class MyStack {
      int arr[];
      int top;   //top will be used for all operations (LIFO)
 
-     MyStack(){
+     public MyStack(){
          arr =new int[capacity];
      }
 

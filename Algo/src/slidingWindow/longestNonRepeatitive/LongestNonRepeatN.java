@@ -8,7 +8,7 @@ import java.util.HashMap;
  *
  * the concept here is i & j will start from same position &
  * keep incrementing  j and find length (j-i+1),
- * as soon as repeat is found we move i to the one next position to the last occurance (j-1+1)
+ * as soon as any element repeats is found we move i to the one next position to the last occurance (j-1+1)
  * again loop runs j is increment
  *
  * and keep incrementing j all over again till a repeat is found
@@ -25,6 +25,7 @@ public class LongestNonRepeatN {
     private static int getLongestNonRepeatingByMap(String str) {
 
         HashMap<Character, Integer> seen = new HashMap<>();
+        //storing number as key & it's index as value
         int maximum_length = 0;
 
 
@@ -40,20 +41,23 @@ public class LongestNonRepeatN {
             // Checking if we have already seen the element or not
             if(seen.containsKey(str.charAt(j)))
             {
-                // If we have seen the number, move the i pointer
-                // to position after the last occurrence
-                i = Math.max(i, seen.get(str.charAt(j)) + 1);//
+                /* If we have seen the number, move the i pointer
+                 to position after the last occurrence*/
+                i = Math.max(i, seen.get(str.charAt(j)) + 1);
+                //checking incase i's index > j's
             }
 
             // Updating the last seen index of the character
             seen.put(str.charAt(j), j);
+
+            //  maximum_length = Math.max(maximum_length, j - i + 1);
 
             if(j - i + 1 > maximum_length){
                 maximum_length =j - i + 1;
                 maxStart=i;
                 maxEnd=j;
             }
-          //  maximum_length = Math.max(maximum_length, j - i + 1);
+
         }
 
         System.out.println("max length:"+maximum_length);

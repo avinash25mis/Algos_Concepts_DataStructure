@@ -1,5 +1,8 @@
 package stack;
 
+import stack.core.MyDynamicStack;
+import stack.core.MyStack;
+
 public class TestStack {
 
     public static void main(String[] args) throws Exception {
