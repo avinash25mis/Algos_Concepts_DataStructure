@@ -8,6 +8,7 @@ public class factorialByRecursion {
         System.out.println(fact);
     }
 
+
     private static int findFactorial(int n) {
         if(n<=1) {
             return 1;

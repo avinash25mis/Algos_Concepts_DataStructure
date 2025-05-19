@@ -2,7 +2,7 @@
 - as it run via stack so we keep on submitting the sub tasks to stack but these subtasks gets executed in reverse order
 
 - in case using some incremental counter to pass as parameter in each call
-   use ++i/--i rather than i++/i-- (don't work )
+   use ++i/--i rather than i++/i-- (as they don't work by the time the function is called)
 - or you may rather increment it before pass it into the parameter
 
 note that still ++i and i+1 cannot be used interchangeably in the argument as there are scenario where you

@@ -9,10 +9,10 @@ import java.util.Arrays;
  */
 public class MyStack {
 
-    int capacity=3;
+    int capacity=3;// in stack capacity is only used to initialize the array
 
      int arr[];
-     int top;   //setting default as 0 hence top will be a position above
+     int top;   //top will be used for all operations (LIFO)
 
      MyStack(){
          arr =new int[capacity];
@@ -20,7 +20,7 @@ public class MyStack {
 
 
      public void push(int value) throws Exception {
-      if(top==arr.length){  //top-3==0/ (top==arr.length)/ top==capacity
+      if(top==arr.length){  /// top==capacity
           throw new MyException("Stack is Full");
       }else{
           arr[top]=value;
@@ -31,8 +31,8 @@ public class MyStack {
 
      public int pop() throws MyException {
          int value=0;
-       if(isEmpty()){
-     throw new MyException("Stack is Empty");
+        if(isEmpty()){
+          throw new MyException("Stack is Empty");
        }else {
            top--;
            value = peek();
@@ -44,7 +44,7 @@ public class MyStack {
 
     public int peek() {
       int length=top;
-      int value=arr[length--];
+      int value=arr[length];
       return  value;
      }
 

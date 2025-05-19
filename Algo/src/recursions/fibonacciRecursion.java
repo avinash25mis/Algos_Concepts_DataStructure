@@ -19,14 +19,17 @@ public class fibonacciRecursion {
     fib(1) fib(0)*/
 
 
-/*    fibonacciRecursion (4)
+/*
+   let us understand it
+   ---------------------------
+
+   fibonacciRecursion (4)
     It will recursively call fibonacciRecursion function for values 2 and 3
-    fibonacciRecursion (2) \\ call for value 0 and 1
-    fibonacciRecursion (0) = 0
-    fibonacciRecursion (1) = 1
-    fibonacciRecursion (3) \\ It will call for 1 and 2
-    fibonacciRecursion (1) = 1
-    fibonacciRecursion (2) \\ It will call for 0 and 1
+    now fibonacciRecursion (2) \\ call for value 0 and 1 and so on
+    ------
+    fibonacciRecursion (3) \\ It will call for 1 and 2 and so on
+    ------
+    -----finally------
     fibonacciRecursion (0) = 0
     fibonacciRecursion (1) = 1
 
@@ -34,10 +37,7 @@ public class fibonacciRecursion {
 
 
     public static void main(String[] args) {
-       int n=12;
-       // fibonacciByRecursionMyTry(6);
-
-
+       int n=8;
 
         for(int i = 0; i < n; i++){
             int result = fibonacciByRecursion(i);
@@ -47,6 +47,9 @@ public class fibonacciRecursion {
     }
 
 
+    /*
+    * the logic follows the reverse order
+    * */
 
     private static int fibonacciByRecursion(int n) {
         if(n<=1){
@@ -54,19 +57,18 @@ public class fibonacciRecursion {
         }
 
         return fibonacciByRecursion(n-1) + fibonacciByRecursion(n-2);
-        //again we multiplyihg with the result of the method return
+        //case where we add  the result of the method return
     }
 
 
-    private static void fibonacciByRecursionMyTry(int n) {
-        if(n<0){
-            return ;
-        }
-        fibonacciByRecursionMyTry(--n);
-        int p= n-1+n-1;
-        System.out.println(p);
+    /*
+    * problem here
+    * it keeps solving same small problem again and again
+    *
+    * */
 
-    }
+
+
 
 
 

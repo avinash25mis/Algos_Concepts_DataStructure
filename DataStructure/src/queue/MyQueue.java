@@ -11,8 +11,8 @@ import java.util.Arrays;
 public class MyQueue {
     private int front;
     private int rear;
-    private int capacity;  //as we need to apply formula during increment ,front=(front+1)%capacity
-    private int size; //as queue is circular ,so arr.length  will not give correct value
+    private int capacity;  //we need to apply formula during increment [ front=(front+1) % capacity ]
+    private int size; // queue can be  circular , arr.length  will not give correct value
 
     int arr[];
 
@@ -23,16 +23,20 @@ public class MyQueue {
     }
 
     MyQueue(){
+
         this(4);
+        //passing a default capacity when user doesn't provide it
     }
 
 
+    //method to check if queue is empty
     boolean isEmpty(MyQueue queue)
     {
         return (queue.size == 0);
     }
 
 
+    //method to return first element of queue
     private int front() {
     if(isEmpty(this)){
         return -1;   //considerd as  -1/0/Integer.MIN_VALUE/ throw Exception
@@ -41,6 +45,7 @@ public class MyQueue {
         return value;
     }
 
+    //method to return last element of queue
     private int rear(){
         if(isEmpty(this)){
             return -1;
@@ -48,14 +53,9 @@ public class MyQueue {
         int value=arr[rear];
         return  value;
     }
-/*
-* Q1 if we are putting a check if size==capacity  then how it will be circular ?
-* Q2 how we will add more element?
-*
-* Ans 1 the queue is circular due to  "% capacity"
-* Ans 2 we can add more element after dequeue operation
-*
-* */
+
+
+
     public void enqueue(int value) throws MyException {
         if(size==capacity){
             throw new MyException("Queue Full");
@@ -72,11 +72,22 @@ public class MyQueue {
            throw new MyException("Queue is Empty");
        }
         int value= front();
-        front=(front+1)%capacity;
+        front = (front+1) % capacity; //intresting  that the fornmula remains the same (toggling fornt/rear)
         size--;
        return value;
 
     }
+
+
+    /*
+     * Q1 if we are putting a check if size==capacity  then how can it  be circular ?
+     * Q2 how we will add more element?
+     *
+     * Ans 1 the queue is circular due to  "% capacity"
+     * Ans 2 we can add more element after dequeue operation
+     *
+     * */
+
 
     @Override
     public String toString() {

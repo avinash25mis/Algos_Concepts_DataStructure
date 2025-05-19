@@ -12,14 +12,14 @@ public class PalindromeByRecursion {
     /*
      * by recursion
      * */
-    private static boolean checkPalindrome(String str, int i, int l) {
-        if (i >= l) {
+    private static boolean checkPalindrome(String str, int startIndex, int lastIndex) {
+        if (startIndex >= lastIndex) {
             return true;
         }
-        if (str.charAt(i) != str.charAt(l)) {
+        if (str.charAt(startIndex) != str.charAt(lastIndex)) {
             return false;
         }
-        return checkPalindrome(str, ++i, --l);
+        return checkPalindrome(str, ++startIndex, --lastIndex);
     }
 
     /*
