@@ -64,10 +64,16 @@ Roll Number: 2, Marks: 7*/
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
-                        (e1, e2) -> e1, //merge function, though not needed here as key will not be dublicated as it is array index
-                        LinkedHashMap::new
-                ));
-        //merge function, In case of a merge, keep only one value in above
+                        (e1, e2) -> e1, //merge function to keep only one value, though not needed here as key will not be dublicated as it is array index
+                        LinkedHashMap::new ));
+
+
+/*
+    TODO
+    LinkedHashMap<Integer, Integer> collect4 = rollToMarks.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,null,null));*/
 
         System.out.println(collect);
 

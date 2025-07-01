@@ -7,7 +7,7 @@ public class FindKthLargestElement {
     public static void main(String[] args) {
         Integer[] arr = new Integer[] { 1, 23, 12, 9, 30, 2, 50 };
        // kthLargestElement(arr,3);
-        findBySTLApproach(arr,3);
+        findByMapApproach(arr,3);
     }
 
 
@@ -20,25 +20,23 @@ public class FindKthLargestElement {
     public static int kthLargestElement(Integer[] arr, int k)
     {
         /*
-        the significance of using Interger[] arr over int [] is that the
-        overloaded function of passing the reverseOrder parameter
-         is applicable to only object types
+         using Interger[] over int [] as it allows us to pass Comparator.reverseOrder parameter
         * */
 
         Arrays.sort(arr, Comparator.reverseOrder());
        // Arrays.sort(arr, Collections.reverseOrder());
        //both the Comparator.reverseOrder() and Collections.reverseOrder() works well
 
-        // Return k'th element not arr[k] as array starts with zero
+        // Return k'th element
         return arr[k - 1];
     }
 
 
-   /* map based STL approach
+   /* map based approach
    *
    *   Array =7,0,16,0,17  , k=3
-   *  say we also get i sorted
-   *  map
+   *  say we also get a sorted map
+   * key | frequency
    *  0  | 2
    *  7  | 1
    * 16  | 1
@@ -47,18 +45,18 @@ public class FindKthLargestElement {
    * second part
    * -----------------
    * now (freq of 0) + (freq of 7) = 2+1=3
-   * so the third largest number is 7
+   * so the third smallest number is 7
    *
    * here we can ignore duplicates if we count each as 1 or use TreeSet instead
+   * then 7 is th second smallest
    * only condition here to start with TreeMap which is bydefault sorted
     * */
 
 
-    static int findBySTLApproach(Integer arr[], int k)
+    static int findByMapApproach(Integer arr[], int k)
     {
 
-        Map<Integer, Integer> treeMap= new TreeMap<>(Collections.reverseOrder());
-        // Map<Integer, Integer> treeMap= new TreeMap<>();
+        Map<Integer, Integer> treeMap = new TreeMap<>(Collections.reverseOrder());
         //Set<Integer> treeMap= new TreeSet<>(Collections.reverseOrder());//if counting each number as unique
 
 
@@ -70,7 +68,7 @@ public class FindKthLargestElement {
 
             treeMap.put(arr[i], treeMap.getOrDefault(arr[i], 0) + 1);
             /* if present then increase the occurance count by + 1
-             if not alreadt present then null+1 will give exception hence default 0 is returned = 0+1=1*/
+             if not  present then null+1 will give exception hence default 0 is returned = 0+1=1 */
         }
 
 
@@ -86,7 +84,7 @@ public class FindKthLargestElement {
             }
         }
 
-        return -1; // returning -1 if k>size of the array
+        return -1; // returning -1 if k > size of the array
 
     }
 

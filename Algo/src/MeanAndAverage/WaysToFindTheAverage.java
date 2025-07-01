@@ -37,7 +37,6 @@ public class WaysToFindTheAverage {
       mean = sum / totalElement
       sum = mean * totalElement
       this is the sum we need to maintain the mean/average as total_element increase
-
      */
 
 

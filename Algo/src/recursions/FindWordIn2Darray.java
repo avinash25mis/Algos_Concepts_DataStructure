@@ -1,5 +1,7 @@
 package recursions;
 
+import java.util.Arrays;
+
 public class FindWordIn2Darray {
 
     /* * The word can be constructed from letters of sequentially
@@ -13,6 +15,11 @@ public class FindWordIn2Darray {
     public boolean exist(char[][] board, String word) {
         int rows = board.length;
         int cols = board[0].length;
+
+        Integer[] abc={1,2};
+        Arrays.stream(abc).filter(e->e/2==0).
+
+
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {

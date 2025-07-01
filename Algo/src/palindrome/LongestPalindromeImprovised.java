@@ -8,9 +8,6 @@ public class LongestPalindromeImprovised {
 
     }
 
-
-
-
     /*
     * when we look at the basic way we find that two loops i & j are just used to navigate around
     * and the third loop which is the main loop to checks if it is a palindrome

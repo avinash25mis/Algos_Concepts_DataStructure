@@ -29,18 +29,19 @@ public class AmstrongNumber {
     private static void findIfAmstrong(int num) {
     int temp=num;
     int temp2=num;
-    //let us first find number of digits
+    //let us first find number of digits as amstrong is each digit ^ totalDigits
         int digits=0;
         while(temp>0){
             digits++;
             temp=temp/10;
         }
 
-        int sum=0;
 
+// now the actual login
+        int sum=0;
         while(temp2>0){
-            int k=temp2%10;
-            sum=sum+(int)(Math.pow(k,digits));
+            int k= temp2 % 10;
+            sum=sum+(int)(Math.pow(k,digits)); //notice the important typecasting
             temp2=temp2/10;
         }
 
